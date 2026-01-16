@@ -364,6 +364,38 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 
 ---
 
+## Mobile & Native Apps
+
+### `/hotwire-native` - Hotwire Native Framework ⭐ NEW
+**파일:** `skills/hotwire-native-framework/`
+**설명:** Rails 웹앱 하나로 iOS/Android 네이티브 앱을 만드는 Hotwire Native 프레임워크
+
+**주요 기능:**
+- Turbo Native 패턴 가이드
+- Bridge Components (카메라, 푸시 알림, 생체 인증 등)
+- iOS/Android 배포 가이드
+- 성능 최적화 & 보안 베스트 프랙티스
+
+**포함 문서:**
+- `SKILL.md` - 메인 가이드
+- `references/01-turbo-native-patterns.md` - 내비게이션 패턴
+- `references/02-bridge-components.md` - 네이티브 기능 연동
+- `references/03-deployment-guide.md` - 앱 스토어 배포
+- `references/04-best-practices.md` - 최적화 & 보안
+
+**사용 예시:**
+```bash
+# 지식 질문
+"Hotwire Native에서 카메라 연동 어떻게 해?"
+
+# 프로젝트 생성 (에이전트 연동)
+"Hotwire Native로 todo 앱 만들어줘"
+```
+
+**관련 에이전트:** `agents/frontend/hotwire-native.md`
+
+---
+
 ## 추가 스킬 (Alphabetical)
 
 ### `/api-client-generator`
@@ -397,10 +429,10 @@ Docker/Kubernetes 설정 생성
 
 ## 통계
 
-- **총 스킬 수:** 30개
-- **총 용량:** ~400KB
-- **카테고리:** 5개
-- **최신 추가:** Intelligent Orchestrator (2026-01-08)
+- **총 스킬 수:** 31개
+- **총 용량:** ~460KB
+- **카테고리:** 6개
+- **최신 추가:** Hotwire Native Framework (2026-01-16)
 
 ---
 
@@ -428,5 +460,5 @@ cat ~/.claude/skill-usage-stats.json
 
 ---
 
-**마지막 업데이트:** 2026-01-08
-**버전:** 1.0.0
+**마지막 업데이트:** 2026-01-16
+**버전:** 1.1.0
