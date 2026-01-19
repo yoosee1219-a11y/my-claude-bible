@@ -95,7 +95,9 @@
 
   "metadata": {
     "created": "2026-01-16",
-    "totalAgents": 56,
-    "totalCategories": 14
+    "updated": "2026-01-16",
+    "totalAgents": 71,
+    "totalCategories": 14,
+    "status": "complete"
   }
 }
