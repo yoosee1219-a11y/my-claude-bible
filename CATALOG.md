@@ -1,6 +1,6 @@
-# Skill Catalog
+# Skill & Agent Catalog
 
-my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
+my-claude-bible에 포함된 모든 스킬과 에이전트의 통합 카탈로그입니다.
 
 ## 목차
 
@@ -9,18 +9,22 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 3. [Analysis & Quality](#analysis--quality)
 4. [Web & Frontend](#web--frontend)
 5. [Utilities & Tools](#utilities--tools)
+6. [Mobile & Native Apps](#mobile--native-apps)
+7. [추가 스킬](#추가-스킬-alphabetical)
+8. [Agent Quick Reference](#agent-quick-reference)
 
 ---
 
 ## Orchestrators & Automation
 
-### `/auto` - Intelligent Orchestrator ⭐ NEW
+### `/auto` - Intelligent Orchestrator
 **파일:** `intelligent-orchestrator.md` (22KB)
 **설명:** 자연어 요청을 분석하여 적절한 스킬/에이전트를 자동 선택하고 실행하는 최상위 조율자
+**연관 에이전트:** `orchestrator.md` (Wave 기반 에이전트 조율)
 
 **주요 기능:**
 - 자동 요청 분석 및 키워드 추출
-- 30개 스킬 데이터베이스 자동 매칭
+- 54개 스킬 + 71개 에이전트 데이터베이스 자동 매칭
 - 투명한 실행 계획 제시
 - 사용 통계 추적 (`~/.claude/skill-usage-stats.json`)
 - Plan 모드 / 실행 모드 지원
@@ -44,6 +48,7 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 ### `/massive-parallel-orchestrator` - Massive Parallel Orchestrator
 **파일:** `massive-parallel-orchestrator.md` (19KB)
 **설명:** 대규모 병렬 작업 처리 시스템
+**연관 에이전트:** `orchestrator.md` (다중 에이전트 병렬 조율)
 
 **주요 기능:**
 - 수백 개 파일 동시 처리
@@ -67,6 +72,7 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 ### `/parallel-dev-team` - Parallel Dev Team
 **파일:** `parallel-dev-team.md` (34KB)
 **설명:** 다중 페르소나 협업 개발 시스템
+**연관 에이전트:** `orchestrator.md` (Wave별 전문 에이전트 조율)
 
 **페르소나:**
 - 아키텍트 (설계)
@@ -98,7 +104,7 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 /yolo "전체 프로젝트 TypeScript 마이그레이션"
 ```
 
-⚠️ **주의:** 중요한 작업 전 백업 필수
+주의: 중요한 작업 전 백업 필수
 
 ---
 
@@ -107,6 +113,7 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 ### `/fullstack-scaffold` - Fullstack Scaffold
 **파일:** `fullstack-scaffold.md`
 **설명:** 풀스택 프로젝트 자동 생성기
+**연관 에이전트:** `arch-system`, `api-designer`, `ui-component`, `db-architect`
 
 **지원 스택:**
 - React + Express + PostgreSQL
@@ -149,6 +156,7 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 ### `/component-generator` - Component Generator
 **파일:** `component-generator.md`
 **설명:** React/Vue/Svelte 컴포넌트 자동 생성
+**연관 에이전트:** `ui-component` (agents/frontend/ui-component.md)
 
 **생성 항목:**
 - 컴포넌트 파일
@@ -168,6 +176,7 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 ### `/dependency-analyzer` - Dependency Analyzer
 **파일:** `dependency-analyzer.md` (18KB)
 **설명:** 의존성 분석 및 최적화 도구
+**연관 에이전트:** `security-sca` (agents/security/security-sca.md)
 
 **분석 항목:**
 - 사용하지 않는 의존성 탐지
@@ -192,6 +201,7 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 ### `/code-reviewer` - Code Reviewer
 **파일:** `code-reviewer.md`
 **설명:** 자동 코드 리뷰 시스템
+**연관 에이전트:** `code-review` (agents/git-collab/code-review.md)
 
 **검토 항목:**
 - 코드 품질
@@ -211,6 +221,7 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 ### `/test-generator` - Test Generator
 **파일:** `test-generator.md`
 **설명:** 자동 테스트 생성기
+**연관 에이전트:** `test-unit`, `test-e2e` (agents/testing/)
 
 **지원 프레임워크:**
 - Jest
@@ -229,6 +240,7 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 ### `/performance-optimizer` - Performance Optimizer
 **파일:** `performance-optimizer.md`
 **설명:** 성능 분석 및 최적화
+**연관 에이전트:** `ui-performance` (agents/frontend/ui-performance.md)
 
 **분석 영역:**
 - 번들 크기
@@ -248,6 +260,7 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 ### `/responsive-designer` - Responsive Designer
 **파일:** `responsive-designer.md`
 **설명:** 반응형 디자인 자동 변환
+**연관 에이전트:** `ui-styling` (agents/frontend/ui-styling.md)
 
 **브레이크포인트:**
 - Mobile: 320px-768px
@@ -281,6 +294,7 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 ### `/accessibility-checker` - Accessibility Checker
 **파일:** `accessibility-checker.md`
 **설명:** 접근성(A11y) 검사 및 개선
+**연관 에이전트:** `ui-a11y` (agents/frontend/ui-a11y.md)
 
 **검사 항목:**
 - WCAG 2.1 준수
@@ -300,6 +314,7 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 ### `/git-wizard` - Git Wizard
 **파일:** `git-wizard.md`
 **설명:** Git 작업 자동화
+**연관 에이전트:** `git-workflow` (agents/git-collab/git-workflow.md)
 
 **기능:**
 - 커밋 메시지 자동 생성
@@ -317,6 +332,7 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 ### `/docs-generator` - Documentation Generator
 **파일:** `docs-generator.md`
 **설명:** 자동 문서 생성기
+**연관 에이전트:** `doc-technical`, `doc-api-spec` (agents/documentation/)
 
 **생성 문서:**
 - API 문서
@@ -334,6 +350,7 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 ### `/env-manager` - Environment Manager
 **파일:** `env-manager.md`
 **설명:** 환경 변수 관리 도구
+**연관 에이전트:** `security-secrets` (agents/security/security-secrets.md)
 
 **기능:**
 - .env 파일 생성
@@ -366,9 +383,10 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 
 ## Mobile & Native Apps
 
-### `/hotwire-native` - Hotwire Native Framework ⭐ NEW
+### `/hotwire-native` - Hotwire Native Framework
 **파일:** `skills/hotwire-native-framework/`
 **설명:** Rails 웹앱 하나로 iOS/Android 네이티브 앱을 만드는 Hotwire Native 프레임워크
+**연관 에이전트:** `hotwire-native` (agents/frontend/hotwire-native.md)
 
 **주요 기능:**
 - Turbo Native 패턴 가이드
@@ -392,47 +410,55 @@ my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
 "Hotwire Native로 todo 앱 만들어줘"
 ```
 
-**관련 에이전트:** `agents/frontend/hotwire-native.md`
-
 ---
 
 ## 추가 스킬 (Alphabetical)
 
-### `/api-client-generator`
-REST/GraphQL API 클라이언트 자동 생성
+| 스킬 | 설명 | 연관 에이전트 |
+|------|------|--------------|
+| `/api-client-generator` | REST/GraphQL API 클라이언트 자동 생성 | `api-implementer` |
+| `/backup-manager` | 프로젝트 백업 및 복원 관리 | `deployment-strategy` |
+| `/ci-cd-setup` | CI/CD 파이프라인 자동 구성 | `cicd-pipeline` |
+| `/container-builder` | Docker/Kubernetes 설정 생성 | `container-k8s`, `docker-specialist` |
+| `/error-tracker` | 에러 추적 및 로깅 시스템 구축 | `logging-architect`, `incident-response` |
+| `/i18n-generator` | 다국어 지원 시스템 구축 | - |
+| `/monitoring-setup` | 모니터링 및 알람 시스템 구성 | `metrics-architect` |
+| `/schema-designer` | 데이터베이스 스키마 설계 도구 | `db-architect` |
+| `/security-audit` | 보안 감사 및 취약점 스캔 | `security-audit`, `security-threat` |
 
-### `/backup-manager`
-프로젝트 백업 및 복원 관리
+---
 
-### `/ci-cd-setup`
-CI/CD 파이프라인 자동 구성
+## Agent Quick Reference
 
-### `/container-builder`
-Docker/Kubernetes 설정 생성
+스킬이 **지식을 제공**한다면, 에이전트는 **자율적으로 실행**합니다.
+전체 에이전트 문서: [agents/README.md](agents/README.md)
 
-### `/error-tracker`
-에러 추적 및 로깅 시스템 구축
-
-### `/i18n-generator`
-다국어 지원 시스템 구축
-
-### `/monitoring-setup`
-모니터링 및 알람 시스템 구성
-
-### `/schema-designer`
-데이터베이스 스키마 설계 도구
-
-### `/security-audit`
-보안 감사 및 취약점 스캔
+| 카테고리 | 에이전트 수 | 주요 에이전트 | 연관 스킬 |
+|---------|-----------|-------------|----------|
+| Database | 6 | `db-architect`, `db-query` | `database-admin.md`, `database-optimization.md` |
+| API | 5 | `api-designer`, `api-implementer` | `graphql-development.md`, `api-docs-automation.md` |
+| Frontend | 6 | `ui-component`, `hotwire-native` | `design-system.md`, `hotwire-native-framework/` |
+| Backend | 7 | `auth-architect`, `realtime-services` | `realtime-features.md`, `caching-strategies.md` |
+| Infrastructure | 7 | `cicd-pipeline`, `cloud-cost` | `ci-cd-pipelines.md`, `cloud-cost-optimizer.md` |
+| Testing | 8 | `test-unit`, `test-e2e` | `qa-tester.md`, `performance-testing.md` |
+| Security | 6 | `security-audit`, `security-threat` | `security-audit.md`, `security-expert.md` |
+| ML/AI | 5 | `ml-training`, `ml-inference` | `ai-integration-expert.md` |
+| Search & Data | 4 | `search-engine`, `data-pipeline` | `data-analyst.md` |
+| Mobile | 3 | `mobile-crossplatform` | `mobile-app-development.md` |
+| Observability | 4 | `metrics-architect`, `logging-architect` | `production-monitoring.md`, `logging-analytics.md` |
+| Documentation | 4 | `doc-technical`, `doc-api-spec` | `tech-writer.md`, `api-docs-automation.md` |
+| Git & Collab | 2 | `code-review`, `git-workflow` | `code-review.md` |
+| Architecture | 4 | `arch-system`, `arch-microservices` | `microservices-architecture.md`, `tech-lead.md` |
 
 ---
 
 ## 통계
 
-- **총 스킬 수:** 31개
-- **총 용량:** ~460KB
-- **카테고리:** 6개
-- **최신 추가:** Hotwire Native Framework (2026-01-16)
+- **총 스킬 수:** 54개
+- **총 에이전트 수:** 71개 (14개 카테고리)
+- **오케스트레이터:** 3개
+- **총 용량:** ~860KB
+- **최신 업데이트:** 스킬-에이전트 시너지 통합 (2026-01-31)
 
 ---
 
@@ -444,12 +470,16 @@ Docker/Kubernetes 설정 생성
 /auto "API 문서 생성하고 TypeScript 마이그레이션해줘"
 ```
 
-### 2. 스킬 조합
-여러 스킬을 순차적으로 사용:
+### 2. 스킬 + 에이전트 조합
+스킬의 지식과 에이전트의 실행력을 함께 활용:
 ```bash
+# 스킬 순차 사용
 /fullstack-scaffold "my-app"
 /test-generator "src/"
 /docs-generator "src/"
+
+# 에이전트 자동 조율 (orchestrator가 Wave 관리)
+"사용자 인증 시스템 구축해줘"
 ```
 
 ### 3. 통계 확인
@@ -460,5 +490,5 @@ cat ~/.claude/skill-usage-stats.json
 
 ---
 
-**마지막 업데이트:** 2026-01-16
-**버전:** 1.1.0
+**마지막 업데이트:** 2026-01-31
+**버전:** 2.0.0
