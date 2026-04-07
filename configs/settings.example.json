@@ -1,0 +1,54 @@
+{
+  "permissions": {
+    "allow": []
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"~/.claude/hooks/dashboard_hook.py\"",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "python \"~/.claude/hooks/team_hook.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"~/.claude/hooks/telegram_notify.py\"",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "python \"~/.claude/hooks/dashboard_hook.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"~/.claude/hooks/telegram_notify.py\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "language": "korean",
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "autoUpdatesChannel": "latest"
+}
