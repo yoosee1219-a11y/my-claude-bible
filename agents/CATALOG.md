@@ -1,509 +1,266 @@
-# Skill Catalog
+# Agent & Skill Catalog
 
-my-claude-vible에 포함된 모든 스킬의 상세 목록입니다.
+my-claude-bible에 포함된 모든 에이전트와 스킬의 인벤토리입니다.
 
-## 목차
-
-1. [Orchestrators & Automation](#orchestrators--automation)
-2. [Development & Scaffolding](#development--scaffolding)
-3. [Analysis & Quality](#analysis--quality)
-4. [Web & Frontend](#web--frontend)
-5. [Utilities & Tools](#utilities--tools)
+**마지막 업데이트:** 2026-04-09
+**총 에이전트:** 218개 (Bible 78 + VoltAgent 140)
+**총 스킬:** 113개
 
 ---
 
-## Orchestrators & Automation
+## Bible Original Agents (78개, 16 카테고리)
 
-### `/auto` - Intelligent Orchestrator ⭐ NEW
-**파일:** `intelligent-orchestrator.md` (22KB)
-**설명:** 자연어 요청을 분석하여 적절한 스킬/에이전트를 자동 선택하고 실행하는 최상위 조율자
+자체 구축한 한글 에이전트. 도메인별 전문 지식 + 한글 description.
 
-**주요 기능:**
-- 자동 요청 분석 및 키워드 추출
-- 30개 스킬 데이터베이스 자동 매칭
-- 투명한 실행 계획 제시
-- 사용 통계 추적 (`~/.claude/skill-usage-stats.json`)
-- Plan 모드 / 실행 모드 지원
+| 카테고리 | 수 | 주요 에이전트 |
+|---------|---|-------------|
+| api/ | 5 | api-designer-legacy, api-gateway, api-implementer, api-validator, api-versioning |
+| architecture/ | 4 | arch-data, arch-event-driven, arch-microservices, arch-system |
+| backend/ | 7 | auth-architect, background-jobs, integration-api, realtime-services, service-caching, service-logic, service-resilience |
+| database/ | 6 | db-architect, db-indexing, db-migration, db-nosql, db-query, db-scaling |
+| documentation/ | 4 | doc-api-spec, doc-architecture, doc-changelog, doc-technical |
+| frontend/ | 6 | hotwire-native, ui-a11y, ui-component, ui-performance, ui-state, ui-styling |
+| git-collab/ | 2 | code-review, git-workflow |
+| infrastructure/ | 7 | cicd-pipeline, cloud-cost, container-k8s, deployment-strategy, docker-specialist, iac-architect, serverless-architect |
+| ml-ai/ | 5 | ml-data, ml-deployment, ml-inference, ml-monitoring, ml-training |
+| mobile/ | 3 | mobile-crossplatform, mobile-native, mobile-testing |
+| observability/ | 4 | incident-response, logging-architect, metrics-architect, tracing-architect |
+| research/ | 4 | research-collector, research-evaluator, research-planner, research-synthesizer |
+| search-data/ | 4 | data-pipeline, message-queue, search-engine, vector-search |
+| security/ | 6 | security-audit, security-compliance, security-penetration, security-sca, security-secrets, security-threat |
+| testing/ | 8 | test-contract, test-e2e, test-integration, test-mutation, test-performance, test-security, test-unit, test-visual |
+| standalone | 1 | orchestrator.md |
 
-**사용 예시:**
-```bash
-/auto "planning.md 파일대로 풀스택 웹서비스 만들어줘"
-/auto "의존성 분석하고 성능 개선 제안해줘"
-/auto "테스트 커버리지 100% 만들어줘"
+## VoltAgent Agents (140개, 10 카테고리)
+
+[VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-codex-subagents) 기반.
+Claude Code 네이티브 포맷 (.md + YAML frontmatter). 5라운드 대결로 품질 검증 완료.
+
+### voltagent-languages/ (29개)
+언어별 전문가 에이전트. Rails 7/8 버전 인식, YJIT 최적화 등 실전 지식 포함.
+
+| 에이전트 | 언어/프레임워크 |
+|---------|--------------|
+| angular-architect | Angular |
+| cpp-pro | C++ |
+| csharp-developer | C# |
+| django-developer | Django (Python) |
+| dotnet-core-expert | .NET Core |
+| dotnet-framework-4.8-expert | .NET Framework 4.8 |
+| elixir-expert | Elixir/Phoenix |
+| expo-react-native-expert | Expo/React Native |
+| fastapi-developer | FastAPI (Python) |
+| flutter-expert | Flutter/Dart |
+| golang-pro | Go |
+| java-architect | Java |
+| javascript-pro | JavaScript |
+| kotlin-specialist | Kotlin |
+| laravel-specialist | Laravel (PHP) |
+| nextjs-developer | Next.js |
+| php-pro | PHP |
+| powershell-5.1-expert | PowerShell 5.1 |
+| powershell-7-expert | PowerShell 7 |
+| python-pro | Python |
+| rails-expert | Ruby on Rails (7.x/8.x 버전 인식) |
+| react-specialist | React |
+| rust-engineer | Rust |
+| spring-boot-engineer | Spring Boot (Java) |
+| sql-pro | SQL |
+| swift-expert | Swift/iOS |
+| symfony-specialist | Symfony (PHP) |
+| typescript-pro | TypeScript |
+| vue-expert | Vue.js |
+
+### voltagent-core-development/ (11개)
+| 에이전트 | 역할 |
+|---------|------|
+| api-designer | API 설계 (REST/GraphQL/OpenAPI) |
+| backend-developer | 백엔드 개발 |
+| design-bridge | 디자인-개발 연결 |
+| electron-pro | Electron 데스크탑 앱 |
+| frontend-developer | 프론트엔드 개발 |
+| fullstack-developer | 풀스택 개발 |
+| graphql-architect | GraphQL 아키텍처 |
+| microservices-architect | 마이크로서비스 |
+| mobile-developer | 모바일 개발 |
+| ui-designer | UI 디자인 |
+| websocket-engineer | WebSocket/실시간 |
+
+### voltagent-infrastructure/ (16개)
+| 에이전트 | 역할 |
+|---------|------|
+| azure-infra-engineer | Azure 인프라 |
+| cloud-architect | 클라우드 아키텍처 |
+| database-administrator | DB 관리 |
+| deployment-engineer | 배포 자동화 |
+| devops-engineer | DevOps |
+| devops-incident-responder | DevOps 인시던트 |
+| docker-expert | Docker |
+| incident-responder | 장애 대응 |
+| kubernetes-specialist | Kubernetes |
+| network-engineer | 네트워크 |
+| platform-engineer | 플랫폼 엔지니어링 |
+| security-engineer | 보안 엔지니어링 |
+| sre-engineer | SRE |
+| terraform-engineer | Terraform |
+| terragrunt-expert | Terragrunt |
+| windows-infra-admin | Windows 인프라 |
+
+### voltagent-quality-security/ (15개)
+| 에이전트 | 역할 |
+|---------|------|
+| accessibility-tester | 접근성 테스트 |
+| ad-security-reviewer | AD 보안 |
+| ai-writing-auditor | AI 작문 감사 |
+| architect-reviewer | 아키텍처 리뷰 |
+| chaos-engineer | 카오스 엔지니어링 |
+| code-reviewer | 코드 리뷰 |
+| compliance-auditor | 컴플라이언스 |
+| debugger | 디버깅 |
+| error-detective | 에러 탐지 |
+| penetration-tester | 침투 테스트 |
+| performance-engineer | 성능 엔지니어링 |
+| powershell-security-hardening | PowerShell 보안 |
+| qa-expert | QA |
+| security-auditor | 보안 감사 |
+| test-automator | 테스트 자동화 |
+
+### voltagent-data-ai/ (13개)
+| 에이전트 | 역할 |
+|---------|------|
+| ai-engineer | AI 엔지니어링 |
+| data-analyst | 데이터 분석 |
+| data-engineer | 데이터 엔지니어링 |
+| data-scientist | 데이터 과학 |
+| database-optimizer | DB 최적화 |
+| llm-architect | LLM 아키텍처 |
+| machine-learning-engineer | ML 엔지니어 |
+| ml-engineer | ML 엔지니어 (실무) |
+| mlops-engineer | MLOps |
+| nlp-engineer | NLP |
+| postgres-pro | PostgreSQL 전문가 |
+| prompt-engineer | 프롬프트 엔지니어링 |
+| reinforcement-learning-engineer | 강화학습 |
+
+### voltagent-developer-experience/ (14개)
+| 에이전트 | 역할 |
+|---------|------|
+| build-engineer | 빌드 시스템 |
+| cli-developer | CLI 개발 |
+| dependency-manager | 의존성 관리 |
+| documentation-engineer | 문서화 |
+| dx-optimizer | 개발자 경험 최적화 |
+| git-workflow-manager | Git 워크플로우 |
+| legacy-modernizer | 레거시 현대화 |
+| mcp-developer | MCP 서버 개발 |
+| powershell-module-architect | PowerShell 모듈 |
+| powershell-ui-architect | PowerShell UI |
+| readme-generator | README 생성 |
+| refactoring-specialist | 리팩토링 |
+| slack-expert | Slack 통합 |
+| tooling-engineer | 도구 엔지니어링 |
+
+### voltagent-specialized-domains/ (12개)
+| 에이전트 | 역할 |
+|---------|------|
+| api-documenter | API 문서화 |
+| blockchain-developer | 블록체인 |
+| embedded-systems | 임베디드 시스템 |
+| fintech-engineer | 핀테크 |
+| game-developer | 게임 개발 |
+| iot-engineer | IoT |
+| m365-admin | Microsoft 365 관리 |
+| mobile-app-developer | 모바일 앱 |
+| payment-integration | 결제 연동 |
+| quant-analyst | 퀀트 분석 |
+| risk-manager | 리스크 관리 |
+| seo-specialist | SEO |
+
+### voltagent-business-product/ (12개)
+| 에이전트 | 역할 |
+|---------|------|
+| business-analyst | 비즈니스 분석 |
+| content-marketer | 콘텐츠 마케팅 |
+| customer-success-manager | CS 매니저 |
+| legal-advisor | 법률 자문 |
+| license-engineer | 라이선스 관리 |
+| product-manager | 제품 관리 |
+| project-manager | 프로젝트 관리 |
+| sales-engineer | 세일즈 엔지니어 |
+| scrum-master | 스크럼 마스터 |
+| technical-writer | 기술 문서 작성 |
+| ux-researcher | UX 리서치 |
+| wordpress-master | WordPress |
+
+### voltagent-meta-orchestration/ (10개)
+| 에이전트 | 역할 |
+|---------|------|
+| agent-installer | 에이전트 설치 |
+| agent-organizer | 에이전트 정리 |
+| context-manager | 컨텍스트 관리 |
+| error-coordinator | 에러 조율 |
+| it-ops-orchestrator | IT 운영 |
+| knowledge-synthesizer | 지식 종합 |
+| multi-agent-coordinator | 멀티 에이전트 조율 |
+| performance-monitor | 성능 모니터링 |
+| task-distributor | 태스크 분배 |
+| workflow-orchestrator | 워크플로우 조율 |
+
+### voltagent-research-analysis/ (8개)
+| 에이전트 | 역할 |
+|---------|------|
+| competitive-analyst | 경쟁 분석 |
+| data-researcher | 데이터 리서치 |
+| market-researcher | 시장 리서치 |
+| project-idea-validator | 아이디어 검증 |
+| research-analyst | 리서치 분석 |
+| scientific-literature-researcher | 학술 문헌 리서치 |
+| search-specialist | 검색 전문 |
+| trend-analyst | 트렌드 분석 |
+
+---
+
+## Name Collision Resolution Log
+
+| 이름 | Bible 위치 | VoltAgent 위치 | 결정 |
+|-----|-----------|---------------|------|
+| api-designer | api/api-designer-legacy.md | voltagent-core-development/api-designer.md | VoltAgent 승 (5라운드 대결 Round 3). Bible 레거시로 rename |
+| hotwire-native | frontend/hotwire-native.md | (없음) | agents/agents/ 레거시 중복 삭제. Bible 원본 유지 |
+
+---
+
+## Skills (113개)
+
+스킬은 `/skill-name`으로 호출. Bible에만 존재 (VoltAgent는 에이전트만 제공).
+전체 스킬 목록은 `skills/` 디렉토리 참조.
+
+주요 스킬:
+- **Orchestrator**: intelligent-orchestrator, massive-parallel-orchestrator, parallel-dev-team
+- **Development**: fullstack, antigravity-website-builder, hotwire-native-framework
+- **Quality**: code-review, qa/tester, debug, security
+- **DevOps**: devops/sre, publish, release-manager
+- **Research**: notebooklm-research-automation
+- **Productivity**: auto-translate, web-scraping-automation, playwright-parallel-test-generator
+
+---
+
+## 사용 가이드
+
+### 에이전트 호출
+```
+@api-designer "REST API 설계해줘"
+@rails-expert "Rails 8 프로젝트 셋업"
+@debugger "이 에러 분석해줘"
 ```
 
-**내부 동작:**
-1. 요청 분석 → 키워드 추출
-2. 스킬 매칭 (설명 10점, 태그 5점, 사용빈도 보너스)
-3. 실행 계획 생성
-4. 순차/병렬 실행
-5. 통계 기록
-
----
-
-### `/massive-parallel-orchestrator` - Massive Parallel Orchestrator
-**파일:** `massive-parallel-orchestrator.md` (19KB)
-**설명:** 대규모 병렬 작업 처리 시스템
-
-**주요 기능:**
-- 수백 개 파일 동시 처리
-- 자동 배치 분할 및 부하 분산
-- 진행 상황 실시간 모니터링
-- 실패 복구 및 재시도 로직
-
-**사용 예시:**
-```bash
-/massive-parallel-orchestrator "src/ 디렉토리의 모든 JS 파일에 JSDoc 추가"
-/massive-parallel-orchestrator "1000개 테스트 파일 병렬 실행"
+### 스킬 호출
+```
+/auto "풀스택 프로젝트 만들어줘"
+/commit
+/review-pr 123
 ```
 
-**적합한 작업:**
-- 대량 파일 변환/수정
-- 배치 테스트 실행
-- 일괄 리팩토링
-
----
-
-### `/parallel-dev-team` - Parallel Dev Team
-**파일:** `parallel-dev-team.md` (34KB)
-**설명:** 다중 페르소나 협업 개발 시스템
-
-**페르소나:**
-- 아키텍트 (설계)
-- 프론트엔드 개발자
-- 백엔드 개발자
-- 보안 전문가
-- DevOps 엔지니어
-- QA 엔지니어
-
-**사용 예시:**
-```bash
-/parallel-dev-team "사용자 인증 시스템 구축"
-```
-
----
-
-### `/yolo` - YOLO Mode
-**파일:** `claude-code-yolo-mode.md` (15KB)
-**설명:** 자동 승인 모드로 무인 작업 실행
-
-**주요 기능:**
-- 모든 작업 자동 승인
-- 에러 시 자동 복구
-- 백업 자동 생성
-- 롤백 지원
-
-**사용 예시:**
-```bash
-/yolo "전체 프로젝트 TypeScript 마이그레이션"
-```
-
-⚠️ **주의:** 중요한 작업 전 백업 필수
-
----
-
-### `/notebooklm-research-automation` - NotebookLM Research Automation
-**파일:** `notebooklm-research-automation.md` (~20KB)
-**설명:** NotebookLM MCP를 활용한 AI 에이전트 기반 리서치 자동화 시스템
-
-**주요 기능:**
-- NotebookLM MCP 설치/인증 가이드
-- 6단계 리서치 워크플로우 (기획→수집→딥리서치→평가→종합→프로토타입)
-- 에이전트 경쟁 패턴 (다관점 4-Persona 평가)
-- 리서치→프로토타입 파이프라인 (antigravity/fullstack-scaffold 연계)
-- MCP 미설치 시 대체 모드 지원
-
-**사용 예시:**
-```bash
-"AI 1인기업 수익화 아이디어 10개 찾아줘"
-"SaaS 경쟁사 3곳 심층 분석해줘"
-"2026 테크 트렌드 리포트 만들어줘"
-```
-
-**연관 에이전트:** `research-planner`, `research-collector`, `research-evaluator`, `research-synthesizer`
-
----
-
-## Development & Scaffolding
-
-### `/fullstack-scaffold` - Fullstack Scaffold
-**파일:** `fullstack-scaffold.md`
-**설명:** 풀스택 프로젝트 자동 생성기
-
-**지원 스택:**
-- React + Express + PostgreSQL
-- Vue + Fastify + MongoDB
-- Next.js + Prisma
-- Svelte + Supabase
-
-**사용 예시:**
-```bash
-/fullstack-scaffold "e-commerce-platform"
-```
-
-**생성 항목:**
-- 프로젝트 구조
-- 인증/권한 시스템
-- API 엔드포인트
-- 데이터베이스 스키마
-- Docker 설정
-
----
-
-### `/antigravity-website-builder` - Antigravity Website Builder
-**파일:** `antigravity-website-builder.md` (15KB)
-**설명:** 15초 웹사이트 빌더 - 즉시 배포 가능한 완성형 웹사이트 생성
-
-**주요 기능:**
-- 템플릿 기반 자동 생성
-- 반응형 디자인
-- SEO 최적화
-- 성능 최적화
-
-**사용 예시:**
-```bash
-/antigravity-website-builder "개인 포트폴리오"
-/antigravity-website-builder "스타트업 랜딩 페이지"
-```
-
----
-
-### `/component-generator` - Component Generator
-**파일:** `component-generator.md`
-**설명:** React/Vue/Svelte 컴포넌트 자동 생성
-
-**생성 항목:**
-- 컴포넌트 파일
-- 스타일 파일
-- 스토리북 스토리
-- 테스트 파일
-
-**사용 예시:**
-```bash
-/component-generator "UserProfileCard" --framework=react
-```
-
----
-
-## Analysis & Quality
-
-### `/dependency-analyzer` - Dependency Analyzer
-**파일:** `dependency-analyzer.md` (18KB)
-**설명:** 의존성 분석 및 최적화 도구
-
-**분석 항목:**
-- 사용하지 않는 의존성 탐지
-- 버전 충돌 분석
-- 보안 취약점 검사
-- 번들 크기 분석
-- 라이선스 호환성
-
-**사용 예시:**
-```bash
-/dependency-analyzer "."
-/dependency-analyzer "src/components" --deep
-```
-
-**출력:**
-- 의존성 트리 시각화
-- 개선 제안
-- 제거 가능한 패키지 목록
-
----
-
-### `/code-reviewer` - Code Reviewer
-**파일:** `code-reviewer.md`
-**설명:** 자동 코드 리뷰 시스템
-
-**검토 항목:**
-- 코드 품질
-- 베스트 프랙티스 준수
-- 보안 취약점
-- 성능 이슈
-- 테스트 커버리지
-
-**사용 예시:**
-```bash
-/code-reviewer "src/api/auth.js"
-/code-reviewer "." --full
-```
-
----
-
-### `/test-generator` - Test Generator
-**파일:** `test-generator.md`
-**설명:** 자동 테스트 생성기
-
-**지원 프레임워크:**
-- Jest
-- Mocha
-- Vitest
-- Playwright
-
-**사용 예시:**
-```bash
-/test-generator "src/utils/calculator.js"
-/test-generator "src/components/" --coverage=100
-```
-
----
-
-### `/performance-optimizer` - Performance Optimizer
-**파일:** `performance-optimizer.md`
-**설명:** 성능 분석 및 최적화
-
-**분석 영역:**
-- 번들 크기
-- 렌더링 성능
-- 메모리 사용
-- 네트워크 요청
-
-**사용 예시:**
-```bash
-/performance-optimizer "."
-```
-
----
-
-## Web & Frontend
-
-### `/responsive-designer` - Responsive Designer
-**파일:** `responsive-designer.md`
-**설명:** 반응형 디자인 자동 변환
-
-**브레이크포인트:**
-- Mobile: 320px-768px
-- Tablet: 768px-1024px
-- Desktop: 1024px+
-
-**사용 예시:**
-```bash
-/responsive-designer "src/components/Header.jsx"
-```
-
----
-
-### `/seo-optimizer` - SEO Optimizer
-**파일:** `seo-optimizer.md`
-**설명:** SEO 최적화 도구
-
-**최적화 항목:**
-- 메타 태그
-- Open Graph
-- 구조화된 데이터
-- 사이트맵 생성
-
-**사용 예시:**
-```bash
-/seo-optimizer "."
-```
-
----
-
-### `/accessibility-checker` - Accessibility Checker
-**파일:** `accessibility-checker.md`
-**설명:** 접근성(A11y) 검사 및 개선
-
-**검사 항목:**
-- WCAG 2.1 준수
-- ARIA 속성
-- 키보드 네비게이션
-- 색상 대비
-
-**사용 예시:**
-```bash
-/accessibility-checker "src/pages"
-```
-
----
-
-## Utilities & Tools
-
-### `/git-wizard` - Git Wizard
-**파일:** `git-wizard.md`
-**설명:** Git 작업 자동화
-
-**기능:**
-- 커밋 메시지 자동 생성
-- 브랜치 관리
-- 충돌 해결 지원
-
-**사용 예시:**
-```bash
-/git-wizard "commit"
-/git-wizard "merge develop into main"
-```
-
----
-
-### `/docs-generator` - Documentation Generator
-**파일:** `docs-generator.md`
-**설명:** 자동 문서 생성기
-
-**생성 문서:**
-- API 문서
-- 컴포넌트 문서
-- README
-- CHANGELOG
-
-**사용 예시:**
-```bash
-/docs-generator "src/api"
-```
-
----
-
-### `/env-manager` - Environment Manager
-**파일:** `env-manager.md`
-**설명:** 환경 변수 관리 도구
-
-**기능:**
-- .env 파일 생성
-- 환경별 분리
-- 보안 검증
-
-**사용 예시:**
-```bash
-/env-manager "setup production"
-```
-
----
-
-### `/migration-assistant` - Migration Assistant
-**파일:** `migration-assistant.md`
-**설명:** 프레임워크 마이그레이션 지원
-
-**지원 마이그레이션:**
-- JavaScript → TypeScript
-- Webpack → Vite
-- Class Components → Hooks
-- REST → GraphQL
-
-**사용 예시:**
-```bash
-/migration-assistant "js-to-ts"
-```
-
----
-
-## Mobile & Native Apps
-
-### `/hotwire-native` - Hotwire Native Framework ⭐ NEW
-**파일:** `skills/hotwire-native-framework/`
-**설명:** Rails 웹앱 하나로 iOS/Android 네이티브 앱을 만드는 Hotwire Native 프레임워크
-
-**주요 기능:**
-- Turbo Native 패턴 가이드
-- Bridge Components (카메라, 푸시 알림, 생체 인증 등)
-- iOS/Android 배포 가이드
-- 성능 최적화 & 보안 베스트 프랙티스
-
-**포함 문서:**
-- `SKILL.md` - 메인 가이드
-- `references/01-turbo-native-patterns.md` - 내비게이션 패턴
-- `references/02-bridge-components.md` - 네이티브 기능 연동
-- `references/03-deployment-guide.md` - 앱 스토어 배포
-- `references/04-best-practices.md` - 최적화 & 보안
-
-**사용 예시:**
-```bash
-# 지식 질문
-"Hotwire Native에서 카메라 연동 어떻게 해?"
-
-# 프로젝트 생성 (에이전트 연동)
-"Hotwire Native로 todo 앱 만들어줘"
-```
-
-**관련 에이전트:** `agents/frontend/hotwire-native.md`
-
----
-
-## 추가 스킬 (Alphabetical)
-
-### `/api-client-generator`
-REST/GraphQL API 클라이언트 자동 생성
-
-### `/backup-manager`
-프로젝트 백업 및 복원 관리
-
-### `/ci-cd-setup`
-CI/CD 파이프라인 자동 구성
-
-### `/container-builder`
-Docker/Kubernetes 설정 생성
-
-### `/error-tracker`
-에러 추적 및 로깅 시스템 구축
-
-### `/i18n-generator`
-다국어 지원 시스템 구축
-
-### `/monitoring-setup`
-모니터링 및 알람 시스템 구성
-
-### `/schema-designer`
-데이터베이스 스키마 설계 도구
-
-### `/security-audit`
-보안 감사 및 취약점 스캔
-
----
-
-## Agent Quick Reference
-
-| 카테고리 | 에이전트 | 연관 스킬 |
-|---------|---------|-----------|
-| Database | db-architect, db-query, db-migration, db-indexing, db-scaling, db-nosql | database-admin |
-| API | api-designer, api-implementer, api-validator, api-gateway, api-versioning | api-docs-automation |
-| Frontend | ui-component, ui-state, ui-a11y, ui-styling, ui-performance, hotwire-native | design-system |
-| Backend | service-logic, auth-architect, integration-api, service-resilience, service-caching, realtime-services, background-jobs | fullstack-scaffold |
-| Search & Data | search-engine, vector-search, message-queue, data-pipeline | - |
-| Infrastructure | iac-architect, container-k8s, docker-specialist, serverless-architect, cicd-pipeline, deployment-strategy, cloud-cost | ci-cd-pipelines |
-| Testing | test-unit, test-integration, test-e2e, test-performance, test-security, test-contract, test-mutation, test-visual | qa-tester |
-| Security | security-audit, security-threat, security-secrets, security-compliance, security-sca, security-penetration | security-audit |
-| ML/AI | ml-training, ml-inference, ml-deployment, ml-monitoring, ml-data | - |
-| Mobile | mobile-crossplatform, mobile-native, mobile-testing | mobile-app-development |
-| Observability | metrics-architect, logging-architect, tracing-architect, incident-response | production-monitoring |
-| Documentation | doc-technical, doc-api-spec, doc-architecture, doc-changelog | tech-writer |
-| Git & Collab | git-workflow, code-review | code-review |
-| Architecture | arch-system, arch-microservices, arch-event-driven, arch-data | tech-lead |
-| **Research** | **research-planner, research-collector, research-evaluator, research-synthesizer** | **notebooklm-research-automation** |
-
----
-
-## 통계
-
-- **총 스킬 수:** 55개
-- **총 에이전트 수:** 75개 (15개 카테고리)
-- **총 용량:** ~500KB+
-- **카테고리:** 7개 (스킬) + 15개 (에이전트)
-- **최신 추가:** NotebookLM Research Automation (2026-02-03)
-
----
-
-## 사용 팁
-
-### 1. Intelligent Orchestrator 활용
-대부분의 작업은 `/auto`로 시작하세요:
-```bash
-/auto "API 문서 생성하고 TypeScript 마이그레이션해줘"
-```
-
-### 2. 스킬 조합
-여러 스킬을 순차적으로 사용:
-```bash
-/fullstack-scaffold "my-app"
-/test-generator "src/"
-/docs-generator "src/"
-```
-
-### 3. 통계 확인
-자주 사용하는 스킬 파악:
-```bash
-cat ~/.claude/skill-usage-stats.json
-```
-
----
-
-**마지막 업데이트:** 2026-02-03
-**버전:** 1.2.0
+### Bible vs VoltAgent 선택 기준
+- **Bible**: 한글 description, 기존 워크플로우와 통합된 에이전트
+- **VoltAgent**: 영어 원본이나 더 깊은 전문성, 더 넓은 도구 접근 (Write/Edit 포함)
+- **언어**: Global CLAUDE.md의 "Always respond in korean"이 모든 에이전트에 자동 적용
