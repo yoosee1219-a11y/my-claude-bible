@@ -77,7 +77,8 @@ sync_dir() {
 
 # 각 디렉토리 동기화
 # agents: 중첩된 skills/ 폴더는 top-level skills/ 중복이므로 제외
-sync_dir "agents" "skills"
+# skills.bak: 로컬 안전 백업용 rename, bible에는 불필요
+sync_dir "agents" "skills skills.bak"
 sync_dir "skills"
 sync_dir "commands"
 sync_dir "hooks"

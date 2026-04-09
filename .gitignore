@@ -54,6 +54,7 @@ scratch.md
 skills/gstack/
 # agents/skills/ duplicates top-level skills/ (legacy install artifact)
 agents/skills/
+agents/skills.bak/
 # gstack worktrees and cache
 skills/**/.gstack/
 skills/**/.gstack-worktrees/
