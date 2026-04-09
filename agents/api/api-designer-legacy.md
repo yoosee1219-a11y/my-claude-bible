@@ -1,7 +1,7 @@
 ---
-name: api-designer
+name: api-designer-legacy
 category: api
-description: REST설계, GraphQL스키마, OpenAPI스펙, 엔드포인트설계, 리소스모델링, API아키텍처 - API 설계 전문 에이전트
+description: REST설계, GraphQL스키마, OpenAPI스펙, 엔드포인트설계, 리소스모델링, API아키텍처 - API 설계 전문 에이전트 (레거시 한글판, VoltAgent api-designer로 교체됨)
 tools:
   - Read
   - Glob

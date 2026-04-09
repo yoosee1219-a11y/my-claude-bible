@@ -55,6 +55,8 @@ skills/gstack/
 # agents/skills/ duplicates top-level skills/ (legacy install artifact)
 agents/skills/
 agents/skills.bak/
+# agents/agents/ legacy duplicate (renamed to agents.bak)
+agents/agents.bak/
 # gstack worktrees and cache
 skills/**/.gstack/
 skills/**/.gstack-worktrees/
