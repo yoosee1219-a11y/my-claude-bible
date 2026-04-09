@@ -48,3 +48,45 @@ coverage/
 notes.md
 TODO.md
 scratch.md
+
+# Claude Code specific exclusions
+# gstack is a separate installed product (489MB), tracked in its own repo
+skills/gstack/
+# agents/skills/ duplicates top-level skills/ (legacy install artifact)
+agents/skills/
+# gstack worktrees and cache
+skills/**/.gstack/
+skills/**/.gstack-worktrees/
+# Browse skill build output (can be regenerated)
+skills/browse/dist/
+# Bin outputs
+skills/**/bin/gstack-*
+# Personal memory (project-specific context, not portable)
+projects/
+# History and logs
+history.jsonl
+*.jsonl
+file-history/
+# Cache
+cache/
+image-cache/
+paste-cache/
+stats-cache.json
+mcp-needs-auth-cache.json
+# Shell snapshots
+shell-snapshots/
+# Todos (ephemeral)
+todos/
+# Telemetry
+telemetry/
+statsig/
+# Plans (project-specific)
+plans/
+# IDE state
+ide/
+# Sessions
+sessions/
+# Local settings with secrets
+settings.local.json
+# MCP bridges (contain API keys)
+mcp-bridges/

@@ -73,6 +73,16 @@
       "name": "Architecture",
       "description": "시스템/마이크로서비스/이벤트/데이터 아키텍처",
       "agents": ["arch-system", "arch-microservices", "arch-event-driven", "arch-data"]
+    },
+    "research": {
+      "name": "Research & Analysis",
+      "description": "리서치 기획, 데이터 수집, 아이디어 평가, 종합 보고서",
+      "agents": ["research-planner", "research-collector", "research-evaluator", "research-synthesizer"]
+    },
+    "multi-ai": {
+      "name": "Multi-AI Orchestration",
+      "description": "Claude×OpenAI×Gemini 교차검증 및 시너지 - 코드 리뷰, 비전 분석, 대안 비교",
+      "agents": ["ai-orchestrator"]
     }
   },
 
@@ -81,7 +91,8 @@
       "design": ["arch-system", "db-architect", "api-designer", "ui-component"],
       "implement": ["db-migration", "api-implementer", "service-logic", "ui-state"],
       "quality": ["test-unit", "test-integration", "security-audit", "doc-api-spec"],
-      "deploy": ["cicd-pipeline", "deployment-strategy"]
+      "deploy": ["cicd-pipeline", "deployment-strategy"],
+      "research": ["research-planner", "research-collector", "research-evaluator", "research-synthesizer"]
     },
     "maxParallelAgents": 5,
     "timeoutSeconds": 300
@@ -96,8 +107,8 @@
   "metadata": {
     "created": "2026-01-16",
     "updated": "2026-01-16",
-    "totalAgents": 71,
-    "totalCategories": 14,
+    "totalAgents": 76,
+    "totalCategories": 16,
     "status": "complete"
   }
 }

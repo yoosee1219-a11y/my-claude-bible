@@ -1,0 +1,50 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+
+# Backup files
+*.backup
+*.bak
+*~
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Environment variables (if accidentally added)
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+build/
+out/
+
+# Coverage
+coverage/
+*.lcov
+
+# Personal notes (optional)
+notes.md
+TODO.md
+scratch.md

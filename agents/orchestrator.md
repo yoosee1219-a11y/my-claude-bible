@@ -175,6 +175,14 @@ triggers:
 | arch-event-driven | 이벤트드리븐, Saga |
 | arch-data | 데이터아키텍처, 일관성 |
 
+### Research & Analysis (R1-R4)
+| Agent | 트리거 키워드 |
+|-------|--------------|
+| research-planner | 리서치, 조사계획, 아이디어찾기, 시장조사, 트렌드분석 |
+| research-collector | 소스수집, 데이터모으기, 노트북생성, 딥리서치, NotebookLM |
+| research-evaluator | 아이디어평가, 비교분석, 순위, 경쟁분석, ROI |
+| research-synthesizer | 리서치종합, 보고서, 인사이트, 핸드오프 |
+
 ## 실행 프로토콜
 
 ### Step 1: 요청 분석
@@ -261,6 +269,31 @@ Wave 2 (병렬):
 Wave 3 (병렬):
 ├── test-e2e: 채팅 플로우 테스트
 └── test-performance: 동시접속 테스트
+```
+
+### 예시 3: "AI 1인기업 수익화 아이디어 10개 찾아줘"
+
+**분석 결과:**
+- 키워드: AI, 1인기업, 수익화, 아이디어
+- 필요 에이전트: research-planner, research-collector, research-evaluator, research-synthesizer
+
+**Wave 계획:**
+```
+Wave 1 (기획):
+└── research-planner: 10개 노트북 구조 설계, 평가 기준 수립
+
+Wave 2 (수집):
+└── research-collector: NotebookLM 노트북 10개 생성, 소스 수집, 딥리서치
+
+Wave 3 (평가):
+└── research-evaluator: 4-Persona 평가, 가중 점수 산출, 순위 결정
+
+Wave 4 (종합):
+└── research-synthesizer: 크로스레퍼런스 분석, 종합 보고서, requirements.md
+
+Wave 5 (개발, 선택):
+├── antigravity-website-builder: 랜딩 페이지
+└── mobile-crossplatform: React Native + Expo 앱
 ```
 
 ## 출력 형식

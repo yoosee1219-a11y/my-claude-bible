@@ -1,0 +1,76 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.sstoday.co.kr)",
+      "WebFetch(domain:www.threads.com)",
+      "WebFetch(domain:fastcampus.co.kr)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:/Users/woosol/.claude/hooks/dashboard_hook.py\"",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "python \"C:/Users/woosol/.claude/hooks/team_hook.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:/Users/woosol/.claude/hooks/dashboard_hook.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:/Users/woosol/.claude/hooks/telegram_notify.py\"",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "python \"C:/Users/woosol/.claude/hooks/dashboard_hook.py\"",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "python \"C:/Users/woosol/.claude/hooks/team_hook.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "example-skills@anthropic-agent-skills": true,
+    "figma@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "anthropic-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/skills"
+      }
+    }
+  },
+  "model": "claude-opus-4-6",
+  "language": "korean",
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "autoUpdatesChannel": "latest"
+}
